@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--Cream);
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container .card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  background: var(--White);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container .card .image-box {
+  width: 50%;
+}
+
+.container .card .content-box {
+  padding: 30px;
+  width: 50%;
+}
+
+.container .card .content-box span {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--Dark-grayish-blue);
+  font-family: "Montserrat", sans-serif;
+}
+
+.container .card .content-box h1 {
+  margin: 15px 0;
+  color: var(--Very-dark-blue);
+}
+
+.container .card .content-box p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--Dark-grayish-blue);
+  font-family: "Montserrat", sans-serif;
+}
+
+.container .card .content-box h2 {
+  position: relative;
+  width: fit-content;
+  font-size: 30px;
+  margin: 15px 0;
+  color: var(--Dark-cyan);
+  font-family: "Fraunces", serif;
+}
+
+.container .card .content-box h2::after {
+  content: "$169.99";
+  position: absolute;
+  right: -60px;
+  top: 12px;
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+.container .card .content-box a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  background: var(--Dark-cyan);
+  color: var(--White);
+  text-decoration: none;
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.container .card .content-box a svg {
+  margin-right: 10px;
+}
+
+@media (max-width: 375px) {
+  .container .card .image-box {
+    background-image: url(../images/image-product-mobile.jpg);
+    background-size: cover;
+    width: 100% !important;
+    height: 200px;
+  }
+
+  .container .card .content-box {
+    width: 100% !important;
+  }
+}
+@media (min-width: 376px) {
+  .container .card .image-box {
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+  }
+}
+
+/*
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+*/
